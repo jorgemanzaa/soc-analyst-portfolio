@@ -7,9 +7,11 @@ Welcome to my cybersecurity portfolio, focused on SOC Analyst L1 skills and secu
 
 ## About Me
 
-I am developing practical skills in cybersecurity, with a focus on Security Operations Center (SOC) analysis, security event investigation and incident response.
+I am developing practical cybersecurity skills with a focus on Security Operations Center (SOC) operations, security event analysis, alert investigation, and incident response.
 
-This portfolio documents my learning progress through simulated security investigations and practical exercises.
+This portfolio showcases my learning progress through simulated SOC investigations and hands-on exercises, including authentication log analysis, IP reputation enrichment, and Windows security event investigation.
+
+I am committed to continuous learning and building the foundational skills required for an entry-level SOC Analyst role.
 
 ## Skills
 
