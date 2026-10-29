@@ -92,3 +92,16 @@ The available evidence comes from a simulated exercise. The following details ha
 - Whether the activity affected any other systems.
 
 The group membership event (4728) should be validated against the original Windows logs. For a built-in local group, Event ID 4732 would normally be expected instead.
+
+## 5. MITRE ATT&CK Mapping
+
+The observed activities may be associated with the following MITRE ATT&CK techniques:
+
+| Technique ID | Technique | Observed Activity |
+|---|---|---|
+| T1136.001 | Create Account: Local Account | Creation of the `backup_admin` account. |
+| T1087.001 | Account Discovery: Local Account | Execution of `net user`. |
+| T1069.001 | Permission Groups Discovery: Local Groups | Execution of `net localgroup administrators`. |
+| T1059.003 | Windows Command Shell | Execution of commands through `cmd.exe`. |
+
+These mappings are based on the commands and events described in the simulated exercise. They represent potential technique associations, not confirmation of malicious activity.
