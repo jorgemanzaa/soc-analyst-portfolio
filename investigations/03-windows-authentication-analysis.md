@@ -58,6 +58,20 @@ The simulated SIEM exercise recorded additional commands following the initial p
 
 These events indicate account and group discovery activity followed by the creation of a new account. In the context of the preceding suspicious authentication events, this sequence warrants investigation for possible unauthorized account creation.
 
+### Group membership and subsequent authentication
+
+The simulated exercise recorded the following additional events:
+
+| **Time** | **Event ID** | **Activity** |
+| -------- | ------------ | ------------ |
+| 10:32:40 | 4728 | Event recorded for adding `backup_admin` to the `Administrators` group |
+| 10:34:12 | 4624 | Successful logon by `backup_admin` on `SRV-FILE-01` from `185.220.101.45` |
+| 10:34:19 | 4688 | `backup_admin` launched `cmd.exe` |
+
+The sequence raises concern because the newly created account was subsequently associated with an administrative group event and then logged on successfully from the same source IP involved in the earlier suspicious authentication activity.
+
+The event sequence should be validated against the original Windows logs before drawing a definitive conclusion. The available simulated evidence supports escalation for further investigation, but does not independently establish the full scope of compromise.
+
 **Security note:** The original exercise includes a password in the account-creation command. It has intentionally been omitted from this public report.
 ## 4. Analysis
 
