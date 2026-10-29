@@ -45,6 +45,20 @@ After the successful logon, the SIEM recorded the following process creation eve
 
 Event ID 4688 records process creation. The commands shown can be used for legitimate administration, but their execution immediately after suspicious authentication warrants further investigation.
 
+### Account discovery and account creation events
+
+The simulated SIEM exercise recorded additional commands following the initial process activity:
+
+| **Time** | **Event ID** | **Activity** |
+| -------- | ------------ | ------------ |
+| 10:32:03 | 4688 | `net.exe` executed with the `net user` command |
+| 10:32:11 | 4688 | `net.exe` executed with the `net localgroup administrators` command |
+| 10:32:24 | 4688 | `net.exe` executed with a command to create the `backup_admin` account |
+| 10:32:25 | 4720 | A user account named `backup_admin` was created |
+
+These events indicate account and group discovery activity followed by the creation of a new account. In the context of the preceding suspicious authentication events, this sequence warrants investigation for possible unauthorized account creation.
+
+**Security note:** The original exercise includes a password in the account-creation command. It has intentionally been omitted from this public report.
 ## 4. Analysis
 
 ### Failed and successful authentication
