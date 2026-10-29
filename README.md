@@ -35,12 +35,15 @@ My investigations will be added here as I complete and document each case.
 
 ## Tools and Resources
 
-- Microsoft Learn
+**Analysis Tools and Data Sources**
 - Windows Security Event Logs
 - VirusTotal
 - AbuseIPDB
+
+**Frameworks and Learning Resources**
 - MITRE ATT&CK
-- GitHub
+- Microsoft Learn
+- GitHub (portfolio and investigation documentation)
 
 ## Disclaimer
 
