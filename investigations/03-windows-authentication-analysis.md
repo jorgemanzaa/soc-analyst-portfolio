@@ -124,6 +124,8 @@ Further investigation is required to validate the original Windows events, confi
 - The supplied records do not include all Windows event fields or the complete host timeline.
 - The legitimacy of the `admin` account activity has not been independently verified.
 - The observed commands can also be used for legitimate administrative purposes.
+- The administrative group membership event (Event ID 4728) should be validated against the original Windows logs, as the expected event ID depends on the group type.
+- The available evidence does not independently confirm the full scope of compromise or persistence.
 
 ## Disclaimer
 
