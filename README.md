@@ -26,7 +26,7 @@ My investigations will be added here as I complete and document each case.
 
 | Case | Investigation | Main focus |
 |---|---|---|
-| 001 | Multiple Failed Logins | Authentication analysis |
+| 001 | [Multiple Failed Logins](investigations/01-multiple-failed-logins.md) | Authentication analysis |
 | 002 | IP Reputation Analysis | Threat intelligence |
 | 003 | Suspicious Authentication | Windows event correlation |
 | 004 | Account Creation and Privilege Assignment | Account activity and privilege investigation |
