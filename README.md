@@ -15,12 +15,12 @@ I am committed to continuous learning and building the foundational skills requi
 
 ## Skills
 
-- Security alert triage
+- Security alert triage (simulated exercises)
 - Windows Security Event Log analysis
-- Authentication investigation
-- IP reputation and threat intelligence enrichment
-- Incident documentation and escalation
-- MITRE ATT&CK mapping
+- Authentication log investigation
+- IP reputation analysis and threat intelligence enrichment
+- Incident documentation and escalation recommendations
+- MITRE ATT&CK technique mapping
 
 ## Investigations
 
