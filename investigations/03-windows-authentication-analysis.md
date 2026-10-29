@@ -112,9 +112,11 @@ These mappings are preliminary hypotheses based on the observed behavior, not pr
 
 ## 7. Conclusion
 
-The simulated alert contains a suspicious sequence of four failed logons, one successful logon to the `admin` account, and subsequent execution of system discovery commands on `SRV-FILE-01`.
+The simulated alert contains a suspicious sequence of four failed logons, followed by a successful logon to the `admin` account from the same source IP. Subsequent events include system discovery commands, creation of the `backup_admin` account, an event associated with administrative group membership, and a successful logon by the newly created account.
 
-The evidence supports a **high level of suspicion and escalation to SOC L2**. Further investigation is required to determine whether the access was unauthorized, establish its scope, and identify any additional activity.
+The combined evidence supports a **high level of suspicion and escalation to SOC L2**. The sequence may indicate unauthorized access and persistence through account creation, but compromise has not been conclusively established.
+
+Further investigation is required to validate the original Windows events, confirm whether the activity was authorized, verify the new account's group membership, determine the scope of any compromise, and identify additional activity.
 
 ## 8. Limitations
 
