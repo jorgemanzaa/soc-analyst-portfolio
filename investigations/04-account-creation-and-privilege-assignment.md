@@ -105,3 +105,32 @@ The observed activities may be associated with the following MITRE ATT&CK techni
 | T1059.003 | Windows Command Shell | Execution of commands through `cmd.exe`. |
 
 These mappings are based on the commands and events described in the simulated exercise. They represent potential technique associations, not confirmation of malicious activity.
+
+## 6. Conclusion and Recommendations
+
+### Conclusion
+
+The simulated investigation identified a sequence of activities involving local account discovery, creation of a new account named `backup_admin`, attempted or reported administrative group assignment, and subsequent successful authentication using that account.
+
+This sequence is suspicious and may indicate unauthorized account creation and privilege escalation.
+
+However, the available evidence is insufficient to confirm a security compromise. Further validation is required.
+
+### Recommended Actions
+
+1. Verify whether the creation of `backup_admin` was authorized.
+2. Review the original Windows Security logs to confirm the group membership event and its Event ID.
+3. Verify whether `backup_admin` belongs to the local Administrators group.
+4. Review the successful logon event (4624), including its logon type, source IP address, and timestamp.
+5. Investigate the commands executed after authentication.
+6. If unauthorized activity is confirmed, disable the account, review other privileged accounts, and follow the organization's incident response procedures.
+
+### Escalation Recommendation
+
+**Recommended priority: High**
+
+Escalate the investigation to SOC Level 2 for further validation because the observed sequence includes account creation, possible privilege assignment, and successful authentication.
+
+### Investigation Scope and Limitations
+
+This case is based on simulated training exercises. The original event records and complete system context have not been independently verified. The findings should therefore be treated as investigative indicators rather than confirmation of a real security incident.
