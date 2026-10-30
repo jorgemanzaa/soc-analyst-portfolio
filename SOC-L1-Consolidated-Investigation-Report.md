@@ -175,3 +175,35 @@ Cases 003 and 004 should receive the highest investigation priority due to their
 Cases 001 and 002 provide relevant indicators of suspicious authentication activity and IP reputation, but the available evidence does not confirm a successful compromise.
 
 All priorities are preliminary assessments based on the simulated evidence and may change if additional information becomes available.
+
+## 5. General Recommendations
+
+Based on the findings from the four investigations, the following actions are recommended:
+
+### 5.1 Authentication Security
+
+- Review failed authentication attempts across affected user accounts.
+- Investigate the source IP address `185.220.101.45` using available security tools and threat intelligence sources.
+- Check for additional successful logons associated with suspicious authentication patterns.
+- Review authentication policies and consider appropriate account protection measures.
+
+### 5.2 Windows Endpoint Security
+
+- Review Windows Security Event Logs for suspicious authentication and process creation activity.
+- Verify whether the creation of the `backup_admin` account was authorized.
+- Confirm whether the account was added to the local Administrators group.
+- Investigate commands executed after successful authentication.
+- Review other privileged accounts for unexpected changes.
+
+### 5.3 Incident Response and Escalation
+
+- Escalate high-priority findings to SOC Level 2 for further investigation.
+- Preserve relevant security logs and supporting evidence.
+- Follow organizational incident response procedures if unauthorized activity is confirmed.
+- Document investigation findings and maintain an accurate timeline of events.
+
+### 5.4 Continuous Monitoring
+
+- Monitor authentication activity for repeated failures and unusual successful logons.
+- Monitor account creation and privileged group membership changes.
+- Review endpoint activity for suspicious command execution.
