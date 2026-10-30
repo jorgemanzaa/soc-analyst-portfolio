@@ -142,3 +142,36 @@ The sequence may indicate unauthorized account creation and privilege escalation
 The group membership event requires validation against the original Windows logs, including confirmation of the group type and the appropriate event ID.
 
 **Assessment:** High-priority suspicious activity recommended for SOC L2 review.
+
+## 4. Overall Risk Assessment
+
+The four investigations identified different types of suspicious activity, with varying levels of potential security impact.
+
+| Case ID | Main Security Concern | Recommended Priority |
+|---|---|---|
+| 001 | Multiple failed authentication attempts against several accounts | Medium |
+| 002 | Suspicious IP reputation indicators | Medium |
+| 003 | Failed and successful logons followed by suspicious process activity | High |
+| 004 | Account creation and potential administrative privilege assignment | High |
+
+### 4.1 Risk Analysis
+
+**Authentication Activity (Cases 001 and 002)**
+
+The repeated authentication failures against multiple accounts, combined with the suspicious IP reputation indicators, justify further investigation.
+
+The available evidence suggests possible brute-force or password-spraying activity. However, no successful authentication was identified in Case 001.
+
+**Windows Authentication and Account Activity (Cases 003 and 004)**
+
+The activity documented in Cases 003 and 004 raises greater concern because it includes successful authentication, command execution, account creation, and potential administrative privilege assignment.
+
+These activities could indicate unauthorized access and attempts to maintain privileged access.
+
+### 4.2 Overall Assessment
+
+Cases 003 and 004 should receive the highest investigation priority due to their potential impact on system security.
+
+Cases 001 and 002 provide relevant indicators of suspicious authentication activity and IP reputation, but the available evidence does not confirm a successful compromise.
+
+All priorities are preliminary assessments based on the simulated evidence and may change if additional information becomes available.
