@@ -207,3 +207,39 @@ Based on the findings from the four investigations, the following actions are re
 - Monitor authentication activity for repeated failures and unusual successful logons.
 - Monitor account creation and privileged group membership changes.
 - Review endpoint activity for suspicious command execution.
+
+## 6. Conclusion and Investigation Limitations
+
+### 6.1 Conclusion
+
+The four simulated investigations demonstrate practical SOC L1 activities, including authentication analysis, threat intelligence enrichment, Windows Security Event Log investigation, and suspicious account activity assessment.
+
+The findings highlight several security concerns:
+
+- Repeated failed authentication attempts against multiple accounts.
+- Suspicious IP reputation indicators.
+- Successful authentication following repeated failed logons.
+- Account creation and potential administrative privilege assignment.
+
+Cases 003 and 004 contain activity that warrants further investigation due to the potential impact on system security.
+
+The available evidence supports identifying suspicious behavior and recommending escalation. However, it is not sufficient to confirm unauthorized access or a successful security compromise.
+
+### 6.2 Investigation Limitations
+
+The following limitations apply to this report:
+
+- All investigations are based on simulated training exercises.
+- Original security event records were not independently verified.
+- Some event details and contextual information were not available.
+- IP reputation information reflects the results recorded during the training exercises and may change over time.
+- The relationship between the activities documented in separate cases has not been independently established.
+- The group membership event recorded as Event ID 4728 requires validation against the original Windows logs.
+
+### 6.3 Final Assessment
+
+The investigations demonstrate the importance of structured alert analysis, evidence collection, threat intelligence enrichment, and appropriate escalation.
+
+Further investigation by SOC Level 2 would be required to validate the high-priority findings and determine whether any unauthorized activity occurred.
+
+**Final Status:** Investigations documented — no confirmed compromise.
